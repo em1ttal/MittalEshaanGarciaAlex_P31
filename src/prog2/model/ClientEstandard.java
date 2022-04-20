@@ -1,11 +1,14 @@
 package prog2.model;
 
+/**
+ * Class for standard client type
+ */
 public class ClientEstandard extends Client {
     /**
      * Constructor
-     * @param name
-     * @param emailAddress
-     * @param homeAddress
+     * @param name         the name
+     * @param emailAddress the email address
+     * @param homeAddress  the home address
      */
     public ClientEstandard(String name, String emailAddress, String homeAddress) {
         super(name, emailAddress, homeAddress);

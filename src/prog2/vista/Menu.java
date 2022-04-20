@@ -9,10 +9,11 @@ import java.util.Scanner;
 
 /**
  * Implements a text menu from a list of options.
+ * @param <TEnum> the type parameter
  * @author Xavi Baró
  */
 public class Menu<TEnum> {
-     /**
+    /**
      * Llista de les opcions
      */
     TEnum[] _llistaOpcions=null;
@@ -29,7 +30,7 @@ public class Menu<TEnum> {
 
     /**
      * Constructor per defecte. Se li ha de passar un enumeració de les opcions.
-     * @param titol Títol del menú
+     * @param titol         Títol del menú
      * @param llistaOpcions Enumeració amb les opcions
      */
     public Menu(String titol,TEnum[] llistaOpcions) {
@@ -48,7 +49,7 @@ public class Menu<TEnum> {
             _descripcions=descripcions;
         }
     }
-    
+
     /**
      * Mostra el menú d'opcions
      */

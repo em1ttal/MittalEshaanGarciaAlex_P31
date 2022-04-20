@@ -21,9 +21,9 @@ public abstract class Client {
 
     /**
      * Constructor
-     * @param name
-     * @param emailAddress
-     * @param homeAddress
+     * @param name         the name
+     * @param emailAddress the email address
+     * @param homeAddress  the home address
      */
     Client(String name, String emailAddress, String homeAddress){
         this.name = name;
@@ -33,27 +33,31 @@ public abstract class Client {
 
     /**
      * Searches type of client
-     * @return type
+     * @return type string
      */
     public abstract String tipusClient();
 
     /**
      * Calculates monthly bill
-     * @return bill
+     * @return bill float
      */
     public abstract float calcMensual();
 
     /**
      * Calculates discount in percent
-     * @return discount
+     * @return discount float
      */
     public abstract float descompteEnv();
 
+    /**
+     * String of client information
+     * @return client information
+     */
     public String toString(){
-        return "Tipus = " + tipusClient() + ", Email = " +
-                emailAddress + ", Nom = " + name + ", Adreça = " +
-                homeAddress + ", Descompte Enviament = " + descompteEnv() +
-                ", Mensualitat = " + calcMensual();
+        return "Tipus: " + tipusClient() + ", Email: " +
+                emailAddress + ", Nom: " + name + ", Adreça: " +
+                homeAddress + ", Descompte Enviament: " + descompteEnv() +
+                ", Mensualitat: " + calcMensual();
     }
 
     /**
@@ -66,7 +70,7 @@ public abstract class Client {
 
     /**
      * Sets client's name
-     * @param name
+     * @param name the name
      */
     public void setName(String name) {
         this.name = name;
@@ -82,7 +86,7 @@ public abstract class Client {
 
     /**
      * Sets client's email address
-     * @param emailAddress
+     * @param emailAddress email address
      */
     public void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
@@ -98,7 +102,7 @@ public abstract class Client {
 
     /**
      * Sets client's home address
-     * @param homeAddress
+     * @param homeAddress home address
      */
     public void setHomeAddress(String homeAddress) {
         this.homeAddress = homeAddress;

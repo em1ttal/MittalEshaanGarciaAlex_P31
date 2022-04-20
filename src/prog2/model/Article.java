@@ -1,7 +1,7 @@
 package prog2.model;
 
 /**
- * Class that stores the relevant information of the articles
+ * Class with information of articles
  * @author eshaan
  * @author alex
  */
@@ -33,12 +33,12 @@ public class Article {
 
     /**
      * Constructor
-     * @param identifier
-     * @param name
-     * @param price
-     * @param priorityShipping
-     * @param shippingDate
-     * @param shippingTime
+     * @param identifier       the identifier
+     * @param name             the name
+     * @param price            the price
+     * @param priorityShipping the priority shipping
+     * @param shippingDate     the shipping date
+     * @param shippingTime     the shipping time
      */
     public Article(String identifier, String name, float price, boolean priorityShipping, String shippingDate, int shippingTime) {
         this.identifier = identifier;
@@ -55,14 +55,14 @@ public class Article {
      */
     @Override
     public String toString() {
-        return "Id = " + identifier + ", Nom = " + name
-                + ", Preu = " + price + ", Temps fins enviament"
-                + shippingTime + ", Enviament Urgent = " + priorityShipping;
+        return "Id: " + identifier + ", Nom: " + name
+                + ", Preu: " + price + ", Temps fins enviament: "
+                + shippingTime + ", Enviament Urgent: " + priorityShipping;
     }
 
     /**
      * Return article identifier
-     * @return identifier
+     * @return identifier identifier
      */
     public String getIdentifier() {
         return identifier;
@@ -70,7 +70,7 @@ public class Article {
 
     /**
      * Sets article identifier
-     * @param identifier
+     * @param identifier the identifier
      */
     public void setIdentifier(String identifier) {
         this.identifier = identifier;
@@ -86,7 +86,7 @@ public class Article {
 
     /**
      * Sets article name
-     * @param name
+     * @param name the name
      */
     public void setName(String name) {
         this.name = name;
@@ -94,7 +94,7 @@ public class Article {
 
     /**
      * Gets article price
-     * @return price
+     * @return price price
      */
     public float getPrice() {
         return price;
@@ -102,7 +102,7 @@ public class Article {
 
     /**
      * Sets article price
-     * @param price
+     * @param price the price
      */
     public void setPrice(float price) {
         this.price = price;
@@ -118,7 +118,7 @@ public class Article {
 
     /**
      * Sets if article has priority shipping
-     * @param priorityShipping
+     * @param priorityShipping the priority shipping
      */
     public void setPriorityShipping(boolean priorityShipping) {
         this.priorityShipping = priorityShipping;
@@ -126,7 +126,7 @@ public class Article {
 
     /**
      * Gets article shipping date
-     * @return date
+     * @return date shipping date
      */
     public String getShippingDate() {
         return shippingDate;
@@ -134,7 +134,7 @@ public class Article {
 
     /**
      * Sets article shipping date
-     * @param shippingDate
+     * @param shippingDate the shipping date
      */
     public void setShippingDate(String shippingDate) {
         this.shippingDate = shippingDate;
@@ -150,7 +150,7 @@ public class Article {
 
     /**
      * Sets article shipping time
-     * @param shippingTime
+     * @param shippingTime the shipping time
      */
     public void setShippingTime(int shippingTime) {
         this.shippingTime = shippingTime;

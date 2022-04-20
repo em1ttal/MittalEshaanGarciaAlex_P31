@@ -1,11 +1,15 @@
 package prog2.vista;
-import java.util.Date;
+
 /**
  * Main Class, Runs all code
  * @author eshaan
  * @author alex
  */
 public class IniciadorMercatUB {
+    /**
+     * Main
+     * @param args the args
+     */
     public static void main(String [] args){
 
     }
