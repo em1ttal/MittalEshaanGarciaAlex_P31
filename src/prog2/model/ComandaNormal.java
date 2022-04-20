@@ -1,6 +1,17 @@
 package prog2.model;
 
+/**
+ * Class of normal order
+ * @author eshaan
+ * @author alex
+ */
 public class ComandaNormal extends Comanda {
+    /**
+     * Constructor
+     * @param client      the client
+     * @param article     the article
+     * @param numArticles the num articles
+     */
     public ComandaNormal(Client client, Article article, int numArticles) {
         super(client, article, numArticles);
     }
@@ -10,12 +21,12 @@ public class ComandaNormal extends Comanda {
         return "Normal";
     }
 
-    @Override
+    @Override //TODO
     public boolean comandaEnviada() {
         return false;
     }
 
-    @Override
+    @Override //TODO
     public boolean comandaRebuda() {
         return false;
     }
