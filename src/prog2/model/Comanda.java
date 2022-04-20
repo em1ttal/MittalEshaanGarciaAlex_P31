@@ -70,8 +70,8 @@ public abstract class Comanda {
     public abstract boolean comandaEnviada();
 
     /**
-     * Has order been recieved?
-     * @return recieved?
+     * Has order been received?
+     * @return received?
      */
     public abstract boolean comandaRebuda();
 
@@ -88,7 +88,7 @@ public abstract class Comanda {
     public String toString(){
         return "Tipus: " + tipusComanda() + ", Article: " + article +
                 ", Client: " + client + ", Quantitat: "  + numArticles +
-                "Data de creacio: " + date_time + ", Enviat: " + comandaEnviada() +
+                ", Data de creacio: " + date_time + ", Enviat: " + comandaEnviada() +
                 ", Rebuda: " + comandaRebuda() + ", Preu: " + calcPreu() +
                 ", Preu Enviament: " + preuEnviament();
     }
