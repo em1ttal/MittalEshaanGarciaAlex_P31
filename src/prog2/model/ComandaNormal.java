@@ -24,6 +24,4 @@ public class ComandaNormal extends Comanda {
     public float preuEnviament() {
         return 1;
     }
-
-
 }
