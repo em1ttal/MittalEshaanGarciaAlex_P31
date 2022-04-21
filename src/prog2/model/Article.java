@@ -27,9 +27,9 @@ public class Article {
      */
     private String shippingDate;
     /**
-     * Shipping time
+     * Time from order to ship in minutes
      */
-    private int shippingTime;
+    private int timeToShip;
 
     /**
      * Constructor
@@ -38,15 +38,15 @@ public class Article {
      * @param price            the price
      * @param priorityShipping the priority shipping
      * @param shippingDate     the shipping date
-     * @param shippingTime     the shipping time
+     * @param timeToShip       the time from order to shipping (minutes)
      */
-    public Article(String identifier, String name, float price, boolean priorityShipping, String shippingDate, int shippingTime) {
+    public Article(String identifier, String name, float price, boolean priorityShipping, String shippingDate, int timeToShip) {
         this.identifier = identifier;
         this.name = name;
         this.price = price;
         this.priorityShipping = priorityShipping;
         this.shippingDate = shippingDate;
-        this.shippingTime = shippingTime;
+        this.timeToShip = timeToShip;
     }
 
     /**
@@ -57,7 +57,7 @@ public class Article {
     public String toString() {
         return "Id: " + identifier + ", Nom: " + name
                 + ", Preu: " + price + ", Temps fins enviament: "
-                + shippingTime + ", Enviament Urgent: " + priorityShipping;
+                + timeToShip + ", Enviament Urgent: " + priorityShipping;
     }
 
     /**
@@ -141,18 +141,18 @@ public class Article {
     }
 
     /**
-     * Gets article shipping time
-     * @return total time
+     * Gets time to ship article
+     * @return  time
      */
-    public int getShippingTime() {
-        return shippingTime;
+    public int getTimeToShip() {
+        return timeToShip;
     }
 
     /**
-     * Sets article shipping time
-     * @param shippingTime the shipping time
+     * Sets time to ship article
+     * @param timeToShip the time to ship
      */
-    public void setShippingTime(int shippingTime) {
-        this.shippingTime = shippingTime;
+    public void setTimeToShip(int timeToShip) {
+        this.timeToShip = timeToShip;
     }
 }
