@@ -11,6 +11,7 @@ public class IniciadorMercatUB {
      * @param args the args
      */
     public static void main(String [] args){
-
+        MercatUB mercatUB = new MercatUB();
+        mercatUB.gestioMercatUB();
     }
 }
