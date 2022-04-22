@@ -86,8 +86,8 @@ public abstract class Comanda {
      * @return order information
      */
     public String toString(){
-        return "Tipus: " + tipusComanda() + ", Article: " + article +
-                ", Client: " + client + ", Quantitat: "  + numArticles +
+        return "Tipus: " + tipusComanda() + ", Article: " + article.getName() +
+                ", Client: " + client.getName() + ", Quantitat: "  + numArticles +
                 ", Data de creacio: " + date_time + ", Enviat: " + comandaEnviada() +
                 ", Rebuda: " + comandaRebuda() + ", Preu: " + calcPreu() +
                 ", Preu Enviament: " + preuEnviament();
