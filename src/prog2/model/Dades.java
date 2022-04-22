@@ -26,7 +26,7 @@ public class Dades implements InDades {
     /**
      * Constructor
      */
-    Dades(){
+    public Dades(){
         llistaArticles = new LlistaArticles();
         llistaClients = new LlistaClients();
         llistaComandes = new LlistaComandes();
@@ -81,9 +81,17 @@ public class Dades implements InDades {
         }
     }
 
+    /**
+     * Adds all clients  to a List<String>
+     * @return List
+     */
     @Override
     public List<String> recuperaClients() {
-        return null;
+        List<String> clients = new ArrayList<>();
+        ArrayList<Client> c = llistaClients.getArrayList();
+        for(Client client : c)
+            clients.add(c.toString());
+        return clients;
     }
 
     /**
@@ -108,18 +116,41 @@ public class Dades implements InDades {
         }
     }
 
+    /**
+     * Removes order from list of orders
+     * @param position
+     * @throws MercatException
+     */
     @Override
     public void esborrarComanda(int position) throws MercatException {
-
+        llistaComandes.esborrar(llistaComandes.getAt(position));
     }
 
+    /**
+     * Adds all orders to a List<String>
+     * @return List
+     */
     @Override
     public List<String> recuperaComandes() {
-        return null;
+        List<String> orders = new ArrayList<>();
+        ArrayList<Comanda> a = llistaComandes.getArrayList();
+        for(Comanda comanda : a)
+            orders.add(a.toString());
+        return orders;
     }
 
+    /**
+     * Adds urgent orders to a List<String>
+     * @return List
+     */
     @Override
     public List<String> recuperaComandesUrgents() {
-        return null;
+        List<String> orders = new ArrayList<>();
+        ArrayList<Comanda> a = llistaComandes.getArrayList();
+        for(Comanda comanda : a) {
+            if(comanda.tipusComanda().equals("Urgent"))
+                orders.add(a.toString());
+        }
+        return orders;
     }
 }
