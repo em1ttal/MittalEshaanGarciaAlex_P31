@@ -11,7 +11,7 @@ public class LlistaComandes extends Llista<Comanda> implements Serializable {
      */
     @Override
     public boolean comprova() {
-
+        //Check
     }
 
     /**
