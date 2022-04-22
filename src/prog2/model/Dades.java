@@ -1,5 +1,7 @@
 package prog2.model;
 import prog2.vista.MercatException;
+
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,7 +19,7 @@ public class Dades implements InDades {
      */
     private LlistaClients llistaClients;
     /**
-     * Orders list
+     * Order list
      */
     private LlistaComandes llistaComandes;
 
@@ -46,9 +48,17 @@ public class Dades implements InDades {
         llistaArticles.afegir(article);
     }
 
+    /**
+     * Adds all articles to a List<String>
+     * @return List
+     */
     @Override
     public List<String> recuperaArticles() {
-        return null;
+        List<String> articles = new ArrayList<>();
+        ArrayList<Article> a = llistaArticles.getArrayList();
+        for(Article article : a)
+            articles.add(a.toString());
+        return articles;
     }
 
     /**

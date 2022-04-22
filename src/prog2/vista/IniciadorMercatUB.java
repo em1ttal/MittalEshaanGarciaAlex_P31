@@ -1,5 +1,6 @@
 package prog2.vista;
-
+import java.util.ArrayList;
+import java.util.List;
 /**
  * Main Class, Runs all code
  * @author eshaan
