@@ -10,8 +10,12 @@ public class LlistaArticles extends Llista<Article> implements Serializable {
      * @return boolean can be added?
      */
     @Override
-    public boolean comprova() {
-
+    public boolean comprova(Article article) {
+        for(Article a : llista){
+            if(a.getIdentifier().equalsIgnoreCase(article.getIdentifier()))
+                return false;
+        }
+        return true;
     }
 
     /**
@@ -21,6 +25,9 @@ public class LlistaArticles extends Llista<Article> implements Serializable {
      */
     @Override
     public void afegir(Article article) throws MercatException {
+        if(!comprova(article)) throw new MercatException("Ya existe una article con esta identificador!");
 
+        llista.add(article);
+        System.out.println("Article added");
     }
 }

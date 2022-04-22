@@ -10,8 +10,12 @@ public class LlistaClients extends Llista<Client> implements Serializable {
      * @return boolean can be added?
      */
     @Override
-    public boolean comprova() {
-
+    public boolean comprova(Client client) {
+        for(Client c : llista){
+            if(c.getEmailAddress().equalsIgnoreCase(client.getEmailAddress()))
+                return false;
+        }
+        return true;
     }
 
     /**
@@ -21,6 +25,9 @@ public class LlistaClients extends Llista<Client> implements Serializable {
      */
     @Override
     public void afegir(Client client) throws MercatException {
+        if(!comprova(client)) throw new MercatException("Ya existe un client con este correo electronico!");
 
+        llista.add(client);
+        System.out.println("Client added");
     }
 }

@@ -10,8 +10,10 @@ public class LlistaComandes extends Llista<Comanda> implements Serializable {
      * @return boolean can be added?
      */
     @Override
-    public boolean comprova() {
-        //Check
+    public boolean comprova(Comanda comanda) {
+        if(comanda instanceof ComandaUrgent && comanda.tipusComanda().equalsIgnoreCase("Normal"))
+            return false;
+        return true;
     }
 
     /**
@@ -21,6 +23,8 @@ public class LlistaComandes extends Llista<Comanda> implements Serializable {
      */
     @Override
     public void afegir(Comanda comanda) throws MercatException {
+        if(!comprova(comanda)) throw new MercatException("No se puede añadir un envio normal a un envio urgente!");
 
+        llista.add(comanda);
     }
 }

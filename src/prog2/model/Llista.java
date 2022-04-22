@@ -35,7 +35,7 @@ public abstract class Llista<T> implements Serializable {
      * Abstract method that checks if object can be added to the list
      * @return boolean can be added?
      */
-    public abstract boolean comprova();
+    public abstract boolean comprova(T t);
 
     /**
      * Abstract method to add object to list
