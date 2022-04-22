@@ -23,10 +23,6 @@ public class Article {
      */
     private boolean priorityShipping;
     /**
-     * When is the article shipped
-     */
-    private String shippingDate;
-    /**
      * Time from order to ship in minutes
      */
     private int timeToShip;
@@ -37,15 +33,13 @@ public class Article {
      * @param name             the name
      * @param price            the price
      * @param priorityShipping the priority shipping
-     * @param shippingDate     the shipping date
      * @param timeToShip       the time from order to shipping (minutes)
      */
-    public Article(String identifier, String name, float price, boolean priorityShipping, String shippingDate, int timeToShip) {
+    public Article(String identifier, String name, float price, boolean priorityShipping, int timeToShip) {
         this.identifier = identifier;
         this.name = name;
         this.price = price;
         this.priorityShipping = priorityShipping;
-        this.shippingDate = shippingDate;
         this.timeToShip = timeToShip;
     }
 
@@ -122,22 +116,6 @@ public class Article {
      */
     public void setPriorityShipping(boolean priorityShipping) {
         this.priorityShipping = priorityShipping;
-    }
-
-    /**
-     * Gets article shipping date
-     * @return date shipping date
-     */
-    public String getShippingDate() {
-        return shippingDate;
-    }
-
-    /**
-     * Sets article shipping date
-     * @param shippingDate the shipping date
-     */
-    public void setShippingDate(String shippingDate) {
-        this.shippingDate = shippingDate;
     }
 
     /**
