@@ -1,9 +1,12 @@
 package prog2.model;
-
 import prog2.vista.MercatException;
-
 import java.io.Serializable;
 
+/**
+ * Class of article list
+ * @author eshaan
+ * @author alex
+ */
 public class LlistaArticles extends Llista<Article> implements Serializable {
     /**
      * Abstract method that checks if object can be added to the list

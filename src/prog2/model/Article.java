@@ -1,11 +1,12 @@
 package prog2.model;
+import java.io.Serializable;
 
 /**
  * Class with information of articles
  * @author eshaan
  * @author alex
  */
-public class Article {
+public class Article implements Serializable {
     /**
      * Article identifier
      */

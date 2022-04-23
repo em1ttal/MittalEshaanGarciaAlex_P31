@@ -1,6 +1,6 @@
 package prog2.vista;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Date;
+
 /**
  * Main Class, Runs all code
  * @author eshaan
@@ -8,8 +8,8 @@ import java.util.List;
  */
 public class IniciadorMercatUB {
     /**
-     * Main
-     * @param args the args
+     * Main method
+     * @param args
      */
     public static void main(String [] args){
         MercatUB mercatUB = new MercatUB();

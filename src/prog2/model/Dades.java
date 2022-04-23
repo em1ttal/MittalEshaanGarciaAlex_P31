@@ -1,6 +1,7 @@
 package prog2.model;
 import prog2.vista.MercatException;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +10,7 @@ import java.util.List;
  * @author eshaan
  * @author alex
  */
-public class Dades implements InDades {
+public class Dades implements InDades, Serializable {
     /**
      * Article list
      */
