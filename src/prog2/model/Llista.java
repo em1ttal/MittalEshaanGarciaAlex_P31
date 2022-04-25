@@ -48,7 +48,7 @@ public abstract class Llista<T> implements Serializable {
      * Deletes object from list
      * @param t object
      */
-    public void esborrar(T t) {
+    public void esborrar(T t) throws MercatException{
         llista.remove(t);
     }
 

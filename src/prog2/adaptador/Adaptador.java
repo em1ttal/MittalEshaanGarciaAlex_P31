@@ -64,4 +64,27 @@ public class Adaptador {
     public List<String> recuperaClients(){
         return dades.recuperaClients();
     }
+
+    /**
+     * Passes order parameters to Dades.java
+     * @param articlePos
+     * @param clientPos
+     * @param quantitat
+     * @param esUrgent
+     * @throws MercatException
+     */
+    public void afegirComanda(int articlePos, int clientPos, int quantitat, boolean esUrgent) throws MercatException{
+        dades.afegirComanda(articlePos, clientPos, quantitat, esUrgent);
+    }
+
+    /**
+     * Passes position of order to remove
+     * @param pos
+     * @throws MercatException
+     */
+    public void esborrarComanda(int pos) throws MercatException{
+        dades.esborrarComanda(pos);
+    }
+
+
 }
