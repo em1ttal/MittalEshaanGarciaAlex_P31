@@ -15,7 +15,7 @@ public class Adaptador {
     /**
      * Data
      */
-    Dades dades;
+    private Dades dades;
 
     /**
      * Constructor
