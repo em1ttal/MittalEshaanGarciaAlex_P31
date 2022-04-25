@@ -1,5 +1,6 @@
 package prog2.adaptador;
 
+import prog2.model.Article;
 import prog2.model.Dades;
 import prog2.vista.MercatException;
 
@@ -20,7 +21,7 @@ public class Adaptador {
     /**
      * Constructor
      */
-    Adaptador(){
+    public Adaptador(){
         dades = new Dades();
     }
 
@@ -39,10 +40,14 @@ public class Adaptador {
 
     /**
      * Recovers article list from Dades.java
-     * @return Article list
+     * @return String of article list
      */
-    public List<String> recuperaArticles(){
-        return dades.recuperaArticles();
+    public String recuperaArticles(){
+        StringBuilder s = new StringBuilder();
+        List<String> a = dades.recuperaArticles();
+        for(String s1 : a)
+            s.append(s1).append("\n");
+        return s.toString();
     }
 
     /**
@@ -59,10 +64,14 @@ public class Adaptador {
 
     /**
      * Recovers client list from Dades.java
-     * @return client list
+     * @return String of client list
      */
-    public List<String> recuperaClients(){
-        return dades.recuperaClients();
+    public String recuperaClients(){
+        StringBuilder s = new StringBuilder();
+        List<String> a = dades.recuperaClients();
+        for(String s1 : a)
+            s.append(s1).append("\n");
+        return s.toString();
     }
 
     /**
@@ -88,17 +97,25 @@ public class Adaptador {
 
     /**
      * Recovers all order list from Dades.java
-     * @return all order list
+     * @return String of orders
      */
-    public List<String> recuperaComanda(){
-        return dades.recuperaComandes();
+    public String recuperaComanda(){
+        StringBuilder s = new StringBuilder();
+        List<String> a = dades.recuperaComandes();
+        for(String s1 : a)
+            s.append(s1).append("\n");
+        return s.toString();
     }
 
     /**
      * Recovers urgent order list from Dades.java
      * @return urgent order list
      */
-    public List<String> recuperaComandaUrgents(){
-        return dades.recuperaComandesUrgents();
+    public String recuperaComandaUrgents(){
+        StringBuilder s = new StringBuilder();
+        List<String> a = dades.recuperaComandesUrgents();
+        for(String s1 : a)
+            s.append(s1).append("\n");
+        return s.toString();
     }
 }

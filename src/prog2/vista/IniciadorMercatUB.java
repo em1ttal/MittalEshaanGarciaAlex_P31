@@ -10,7 +10,7 @@ public class IniciadorMercatUB {
      * Main
      * @param args the args
      */
-    public static void main(String [] args){
+    public static void main(String [] args) throws MercatException {
         MercatUB mercatUB = new MercatUB();
         mercatUB.gestioMercatUB();
     }

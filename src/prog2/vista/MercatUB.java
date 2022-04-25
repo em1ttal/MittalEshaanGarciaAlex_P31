@@ -1,5 +1,7 @@
 package prog2.vista;
 import prog2.adaptador.*;
+
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 /**
@@ -9,13 +11,14 @@ import java.util.Scanner;
  * @author alex
  */
 public class MercatUB {
-
+    private Adaptador adaptador;
 
     /**
      * Starts menu
      */
-    public void gestioMercatUB(){
+    public void gestioMercatUB() throws MercatException {
         Scanner sc = new Scanner(System.in);
+        adaptador = new Adaptador();
         gestioMenu(sc);
     }
 
@@ -77,7 +80,39 @@ public class MercatUB {
             "Sortir"                        //Option 5
     };
 
-    public void gestioMenu(Scanner sc){
+    private void addArticle(Scanner sc) throws MercatException {
+        System.out.print("Identificador del articulo: "); String identifier = sc.nextLine();
+        System.out.print("Nombre del articulo: "); String name = sc.nextLine();
+        System.out.print("Precio del articulo: "); float price = sc.nextFloat(); sc.nextLine();
+        System.out.print("Enviament Urgente(True/False): "); boolean priority = sc.nextBoolean();
+        System.out.print("Tiempo para enviar: "); int time = sc.nextInt(); sc.nextLine();
+        adaptador.afegirArticle(identifier, name, price, time, priority);
+    }
+
+    private void addClient(Scanner sc) throws MercatException {
+        System.out.print("Email del cliente: "); String email = sc.nextLine();
+        System.out.print("Nombre del cliente: "); String name = sc.nextLine();
+        System.out.print("Direccion del cliente: "); String address = sc.nextLine();
+        System.out.print("Cliente Premium(True/False): "); boolean premium = sc.nextBoolean();
+        adaptador.afegirClient(email, name, address, premium);
+    }
+
+    private void addOrder(Scanner sc) throws MercatException {
+        System.out.print("Posicion del articulo: "); int posA = sc.nextInt(); sc.nextLine();
+        System.out.print("Posicion del cliente: "); int posc = sc.nextInt(); sc.nextLine();
+        System.out.print("Cantidad: "); int quantity = sc.nextInt(); sc.nextLine();
+        System.out.print("Pedido Urgente(True/False): "); boolean urgent = sc.nextBoolean();
+        adaptador.afegirComanda(posA, posc, quantity, urgent);
+    }
+
+    private void delOrder(Scanner sc) throws MercatException {
+        System.out.print("Posicion de pedido que quieres borrar: ");
+        int pos = sc.nextInt(); sc.nextLine();
+        adaptador.esborrarComanda(pos);
+        System.out.println("Pedido borrado");
+    }
+
+    public void gestioMenu(Scanner sc) throws MercatException {
         Menu menu = new Menu<>("Menu Principal", MENU_OPTIONS.values());
         menu.setDescripcions(mainMenu);
 
@@ -85,7 +120,6 @@ public class MercatUB {
         ARTICLE_OPTIONS aOption = null;
         CLIENT_OPTIONS cOption = null;
         ORDER_OPTIONS oOption = null;
-
         do {
             menu.mostrarMenu();
             mainOption = (MENU_OPTIONS) menu.getOpcio(sc);
@@ -98,10 +132,10 @@ public class MercatUB {
                     aOption = (ARTICLE_OPTIONS) menu1.getOpcio(sc);
                     switch (aOption){
                         case M_Opcion_1_AfegirArticle:
-
+                            addArticle(sc);
                             break;
                         case M_Opcion_2_VisualitzarArticles:
-
+                            System.out.println(adaptador.recuperaArticles());
                             break;
                         case M_Opcion_3_Sortir:
                             break;
@@ -114,10 +148,10 @@ public class MercatUB {
                     cOption = (CLIENT_OPTIONS) menu2.getOpcio(sc);
                     switch (cOption){
                         case M_Opcion_1_AfegirClient:
-
+                            addClient(sc);
                             break;
                         case M_Opcion_2_VisualitzarClients:
-
+                            System.out.println(adaptador.recuperaClients());
                             break;
                         case M_Opcion_3_Sortir:
                             break;
@@ -130,16 +164,16 @@ public class MercatUB {
                     oOption = (ORDER_OPTIONS) menu3.getOpcio(sc);
                     switch (oOption){
                         case M_Opcion_1_AfegirComanda:
-
+                            addOrder(sc);
                             break;
                         case M_Opcion_2_EsborrarComanda:
-
+                            delOrder(sc);
                             break;
                         case M_Opcion_3_VisualitzarComanda:
-
+                            adaptador.recuperaComanda();
                             break;
                         case M_Opcion_4_VisualitzarComandaUrgent:
-
+                            adaptador.recuperaComandaUrgents();
                             break;
                         case M_Opcion_5_Sortir:
                             break;

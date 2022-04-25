@@ -105,6 +105,9 @@ public class Dades implements InDades {
      */
     @Override
     public void afegirComanda(int articlePos, int clientPos, int quantitat, boolean esUrgent) throws MercatException {
+        if(articlePos > llistaArticles.getSize()) throw new MercatException("Esta posicion de articulo no existe");
+        if(clientPos > llistaClients.getSize()) throw new MercatException("Esta posicion de cliente no existe");
+
         Article a = llistaArticles.getAt(articlePos);
         Client c = llistaClients.getAt(clientPos);
         if(esUrgent) {
@@ -123,10 +126,10 @@ public class Dades implements InDades {
      */
     @Override
     public void esborrarComanda(int position) throws MercatException {
-        if(llistaComandes.isEmpty()) throw new MercatException("Llista de comandas esta vacia");
+        if(llistaComandes.isEmpty()) throw new MercatException("Llista de pedidos esta vacia");
+        else if(llistaComandes.getSize() < position) throw new MercatException("No existe un pedido en esta posicion.");
 
-        llistaComandes.esborrar(llistaComandes.getAt(position));
-
+        llistaComandes.esborrar(llistaComandes.getAt(position - 1));
     }
 
     /**
