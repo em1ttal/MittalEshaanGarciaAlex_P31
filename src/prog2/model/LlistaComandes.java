@@ -1,8 +1,12 @@
 package prog2.model;
-
 import prog2.vista.MercatException;
 import java.io.Serializable;
 
+/**
+ * Class of order list
+ * @author eshaan
+ * @author alex
+ */
 public class LlistaComandes extends Llista<Comanda> implements Serializable {
     /**
      * Abstract method that checks if object can be added to the list

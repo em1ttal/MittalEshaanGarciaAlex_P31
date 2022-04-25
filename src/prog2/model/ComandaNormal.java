@@ -1,4 +1,5 @@
 package prog2.model;
+import java.util.Date;
 
 /**
  * Class of normal order
@@ -6,6 +7,7 @@ package prog2.model;
  * @author alex
  */
 public class ComandaNormal extends Comanda {
+    Date d = new Date();
     /**
      * Constructor
      * @param client      the client
@@ -21,13 +23,15 @@ public class ComandaNormal extends Comanda {
         return "Normal";
     }
 
-    @Override //TODO
+    @Override
     public boolean comandaEnviada() {
+
         return false;
     }
 
-    @Override //TODO
+    @Override
     public boolean comandaRebuda() {
+
         return false;
     }
 

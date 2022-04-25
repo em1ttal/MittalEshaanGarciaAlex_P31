@@ -1,11 +1,12 @@
 package prog2.model;
+import java.io.Serializable;
 
 /**
  * Abstract class of clients
  * @author eshaan
  * @author alex
  */
-public abstract class Client {
+public abstract class Client implements Serializable {
     /**
      * Client's name
      */
