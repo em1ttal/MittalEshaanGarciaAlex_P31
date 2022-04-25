@@ -86,5 +86,19 @@ public class Adaptador {
         dades.esborrarComanda(pos);
     }
 
+    /**
+     * Recovers all order list from Dades.java
+     * @return all order list
+     */
+    public List<String> recuperaComanda(){
+        return dades.recuperaComandes();
+    }
 
+    /**
+     * Recovers urgent order list from Dades.java
+     * @return urgent order list
+     */
+    public List<String> recuperaComandaUrgents(){
+        return dades.recuperaComandesUrgents();
+    }
 }
