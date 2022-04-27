@@ -58,7 +58,7 @@ public abstract class Client implements Serializable {
         return "Tipus: " + tipusClient() + ", Email: " +
                 emailAddress + ", Nom: " + name + ", Adreça: " +
                 homeAddress + ", Descompte Enviament: " + descompteEnv() +
-                ", Mensualitat: " + calcMensual();
+                "%, Mensualitat: " + calcMensual() + "€";
     }
 
     /**

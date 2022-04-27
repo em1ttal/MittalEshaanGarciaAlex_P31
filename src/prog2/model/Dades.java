@@ -57,7 +57,7 @@ public class Dades implements InDades {
         List<String> articles = new ArrayList<>();
         ArrayList<Article> a = llistaArticles.getArrayList();
         for(Article article : a)
-            articles.add(a.toString());
+            articles.add(article.toString());
         return articles;
     }
 

@@ -51,7 +51,7 @@ public class Article implements Serializable {
     @Override
     public String toString() {
         return "Id: " + identifier + ", Nom: " + name
-                + ", Preu: " + price + ", Temps fins enviament: "
+                + ", Preu: " + price + "€, Temps fins enviament: "
                 + timeToShip + ", Enviament Urgent: " + priorityShipping;
     }
 

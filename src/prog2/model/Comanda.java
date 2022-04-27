@@ -91,7 +91,7 @@ public abstract class Comanda implements Serializable {
                 ", Client: " + client.getName() + ", Quantitat: "  + numArticles +
                 ", Data de creacio: " + date_time + ", Enviat: " + comandaEnviada() +
                 ", Rebuda: " + comandaRebuda() + ", Preu: " + calcPreu() +
-                ", Preu Enviament: " + preuEnviament();
+                "€, Preu Enviament: " + preuEnviament() + "€";
     }
 
     /**

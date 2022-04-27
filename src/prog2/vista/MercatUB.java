@@ -141,10 +141,11 @@ public class MercatUB {
      */
     private void addOrder(Scanner sc) throws MercatException {
         System.out.print("Posicion del articulo: "); int posA = sc.nextInt(); sc.nextLine();
-        System.out.print("Posicion del cliente: "); int posc = sc.nextInt(); sc.nextLine();
+        System.out.print("Posicion del cliente: "); int posC = sc.nextInt(); sc.nextLine();
         System.out.print("Cantidad: "); int quantity = sc.nextInt(); sc.nextLine();
         System.out.print("Pedido Urgente(True/False): "); boolean urgent = sc.nextBoolean();
-        adaptador.afegirComanda(posA, posc, quantity, urgent);
+        posA--; posC--;
+        adaptador.afegirComanda(posA, posC, quantity, urgent);
     }
 
     /**
@@ -224,10 +225,10 @@ public class MercatUB {
                                 delOrder(sc);
                                 break;
                             case M_Opcion_3_VisualitzarComanda:
-                                adaptador.recuperaComanda();
+                                System.out.println(adaptador.recuperaComanda());
                                 break;
                             case M_Opcion_4_VisualitzarComandaUrgent:
-                                adaptador.recuperaComandaUrgents();
+                                System.out.println(adaptador.recuperaComandaUrgents());
                                 break;
                             case M_Opcion_5_Sortir:
                                 break;
