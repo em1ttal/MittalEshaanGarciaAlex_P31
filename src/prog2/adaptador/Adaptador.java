@@ -118,4 +118,22 @@ public class Adaptador {
             s.append(s1).append("\n");
         return s.toString();
     }
+
+    /**
+     * Saves date to text file
+     * @param camiDesti
+     * @throws MercatException
+     */
+    public void guardaDades(String camiDesti) throws MercatException{
+
+    }
+
+    /**
+     * Recovers data form text file
+     * @param camiOrigen
+     * @throws MercatException
+     */
+    public void carregaDades(String camiOrigen) throws MercatException{
+
+    }
 }
