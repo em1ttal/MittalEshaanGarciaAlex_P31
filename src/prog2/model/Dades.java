@@ -50,14 +50,14 @@ public class Dades implements InDades {
 
     /**
      * Adds all articles to a List<String>
+     *
      * @return List
      */
     @Override
-    public List<String> recuperaArticles() {
-        List<String> articles = new ArrayList<>();
-        ArrayList<Article> a = llistaArticles.getArrayList();
-        for(Article article : a)
-            articles.add(article.toString());
+    public ArrayList<Article> recuperaArticles() {
+        ArrayList<Article> articles = new ArrayList<>();
+        for(Article a : llistaArticles.getArrayList())
+            articles.add(a);
         return articles;
     }
 
@@ -83,14 +83,14 @@ public class Dades implements InDades {
 
     /**
      * Adds all clients to a List<String>
+     *
      * @return List
      */
     @Override
-    public List<String> recuperaClients() {
-        List<String> clients = new ArrayList<>();
-        ArrayList<Client> c = llistaClients.getArrayList();
-        for(Client client : c)
-            clients.add(client.toString());
+    public ArrayList<Client> recuperaClients() {
+        ArrayList<Client> clients = new ArrayList<>();
+        for(Client c : llistaClients.getArrayList())
+            clients.add(c);
         return clients;
     }
 
@@ -134,28 +134,28 @@ public class Dades implements InDades {
 
     /**
      * Adds all orders to a List<String>
+     *
      * @return list
      */
     @Override
-    public List<String> recuperaComandes() {
-        List<String> orders = new ArrayList<>();
-        ArrayList<Comanda> c = llistaComandes.getArrayList();
-        for(Comanda comanda : c)
-            orders.add(comanda.toString());
+    public ArrayList<Comanda> recuperaComandes() {
+        ArrayList<Comanda> orders = new ArrayList<>();
+        for(Comanda c : llistaComandes.getArrayList())
+            orders.add(c);
         return orders;
     }
 
     /**
      * Adds urgent orders to a List<String>
+     *
      * @return list
      */
     @Override
-    public List<String> recuperaComandesUrgents() {
-        List<String> urgentOrders = new ArrayList<>();
-        ArrayList<Comanda> c = llistaComandes.getArrayList();
-        for(Comanda comanda : c) {
-            if(comanda.tipusComanda().equalsIgnoreCase("Urgent"))
-                urgentOrders.add(comanda.toString());
+    public ArrayList<Comanda> recuperaComandesUrgents() {
+        ArrayList<Comanda> urgentOrders = new ArrayList<>();
+        for(Comanda c : llistaComandes.getArrayList()) {
+            if(c.tipusComanda().equalsIgnoreCase("Urgent"))
+                urgentOrders.add(c);
         }
         return urgentOrders;
     }

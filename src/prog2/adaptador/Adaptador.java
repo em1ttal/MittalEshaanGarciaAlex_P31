@@ -1,11 +1,9 @@
 package prog2.adaptador;
 
-import prog2.model.Article;
-import prog2.model.Dades;
+import prog2.model.*;
 import prog2.vista.MercatException;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Class to join model and vista
@@ -44,9 +42,9 @@ public class Adaptador {
      */
     public String recuperaArticles(){
         StringBuilder s = new StringBuilder();
-        List<String> a = dades.recuperaArticles();
-        for(String s1 : a)
-            s.append(s1).append("\n");
+        ArrayList<Article> a = dades.recuperaArticles();
+        for(Article article : a)
+            s.append(article.toString()).append("\n");
         return s.toString();
     }
 
@@ -68,9 +66,9 @@ public class Adaptador {
      */
     public String recuperaClients(){
         StringBuilder s = new StringBuilder();
-        List<String> a = dades.recuperaClients();
-        for(String s1 : a)
-            s.append(s1).append("\n");
+        ArrayList<Client> c = dades.recuperaClients();
+        for(Client client : c)
+            s.append(client.toString()).append("\n");
         return s.toString();
     }
 
@@ -101,9 +99,9 @@ public class Adaptador {
      */
     public String recuperaComanda(){
         StringBuilder s = new StringBuilder();
-        List<String> a = dades.recuperaComandes();
-        for(String s1 : a)
-            s.append(s1).append("\n");
+        ArrayList<Comanda> c = dades.recuperaComandes();
+        for(Comanda comanda : c)
+            s.append(comanda.toString()).append("\n");
         return s.toString();
     }
 
@@ -113,9 +111,9 @@ public class Adaptador {
      */
     public String recuperaComandaUrgents(){
         StringBuilder s = new StringBuilder();
-        List<String> a = dades.recuperaComandesUrgents();
-        for(String s1 : a)
-            s.append(s1).append("\n");
+        ArrayList<Comanda> c = dades.recuperaComandes();
+        for(Comanda comanda : c)
+            s.append(comanda.toString()).append("\n");
         return s.toString();
     }
 
