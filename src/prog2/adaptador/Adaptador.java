@@ -118,7 +118,7 @@ public class Adaptador {
     }
 
     /**
-     * Saves date to text file
+     * Saves data to text file
      * @param camiDesti
      * @throws MercatException
      */

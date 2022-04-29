@@ -64,6 +64,15 @@ public class MercatUB {
     }
 
     /**
+     * File menu options
+     */
+    private static enum FILE_OPTIONS {
+        M_Opcion_1_Articles,
+        M_Opcion_2_Clients,
+        M_opcions_3_Comandes
+    }
+
+    /**
      * Main menu text
      */
     private static final String[] mainMenu = {
@@ -102,6 +111,12 @@ public class MercatUB {
             "Visualitzar comanda",          //Option 3
             "Visualitzar comandes urgents", //Option 4
             "Sortir"                        //Option 5
+    };
+
+    private static final String[] fileMenu = {
+            "Articles",
+            "Clientes",
+            "Comandes"
     };
 
     /**
@@ -174,6 +189,7 @@ public class MercatUB {
         ARTICLE_OPTIONS aOption = null;
         CLIENT_OPTIONS cOption = null;
         ORDER_OPTIONS oOption = null;
+        FILE_OPTIONS fOption = null;
         do {
             try{
                 menu.mostrarMenu();
@@ -235,10 +251,22 @@ public class MercatUB {
                         }
                         break;
                     case M_Opcion_4_GuardarDades:
+                        Menu menu4 = new Menu("Menu de Ficheros", FILE_OPTIONS.values());
+                        menu4.setDescripcions(fileMenu);
+                        menu4.mostrarMenu();
+                        fOption = (FILE_OPTIONS) menu4.getOpcio(sc);
+                        switch (fOption){
 
+                        }
                         break;
                     case M_Opcion_5_CarregaDades:
+                        Menu menu5 = new Menu("Menu de Ficheros", FILE_OPTIONS.values());
+                        menu5.setDescripcions(fileMenu);
+                        menu5.mostrarMenu();
+                        fOption = (FILE_OPTIONS) menu5.getOpcio(sc);
+                        switch (fOption){
 
+                        }
                         break;
                 }
             } catch (MercatException e) { System.out.println(e.getMessage()); }
