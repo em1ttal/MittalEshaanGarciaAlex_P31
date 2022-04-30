@@ -2,7 +2,6 @@ package prog2.model;
 import prog2.vista.MercatException;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Class that communicates with Adaptador.java
@@ -49,9 +48,8 @@ public class Dades implements InDades {
     }
 
     /**
-     * Adds all articles to a List<String>
-     *
-     * @return List
+     * Adds all articles to an ArrayList
+     * @return ArrayList
      */
     @Override
     public ArrayList<Article> recuperaArticles() {
@@ -82,9 +80,8 @@ public class Dades implements InDades {
     }
 
     /**
-     * Adds all clients to a List<String>
-     *
-     * @return List
+     * Adds all clients to an ArrayList
+     * @return ArrayList
      */
     @Override
     public ArrayList<Client> recuperaClients() {
@@ -133,9 +130,8 @@ public class Dades implements InDades {
     }
 
     /**
-     * Adds all orders to a List<String>
-     *
-     * @return list
+     * Adds all orders to an ArrayList
+     * @return ArrayList
      */
     @Override
     public ArrayList<Comanda> recuperaComandes() {
@@ -146,9 +142,8 @@ public class Dades implements InDades {
     }
 
     /**
-     * Adds urgent orders to a List<String>
-     *
-     * @return list
+     * Adds urgent orders to an ArrayList
+     * @return ArrayList
      */
     @Override
     public ArrayList<Comanda> recuperaComandesUrgents() {

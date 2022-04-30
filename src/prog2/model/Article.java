@@ -45,7 +45,7 @@ public class Article implements Serializable {
     }
 
     /**
-     * Puts article information into one string
+     * Puts article information into a string
      * @return article information
      */
     @Override
@@ -73,7 +73,7 @@ public class Article implements Serializable {
 
     /**
      * Gets article name
-     * @return name
+     * @return name name
      */
     public String getName() {
         return name;
@@ -121,7 +121,7 @@ public class Article implements Serializable {
 
     /**
      * Gets time to ship article
-     * @return  time
+     * @return time time to ship
      */
     public int getTimeToShip() {
         return timeToShip;

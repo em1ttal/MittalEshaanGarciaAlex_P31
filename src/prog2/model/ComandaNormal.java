@@ -7,7 +7,11 @@ import java.util.Date;
  * @author alex
  */
 public class ComandaNormal extends Comanda {
+    /**
+     * The Date
+     */
     Date d = new Date();
+
     /**
      * Constructor
      * @param client      the client

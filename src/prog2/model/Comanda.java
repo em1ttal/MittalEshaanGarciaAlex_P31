@@ -52,7 +52,7 @@ public abstract class Comanda implements Serializable {
 
     /**
      * Calculates price
-     * @return price
+     * @return price float
      */
     public float calcPreu(){
        return article.getPrice() * this.numArticles;
@@ -66,19 +66,19 @@ public abstract class Comanda implements Serializable {
 
     /**
      * Has order been sent?
-     * @return sent?
+     * @return sent ?
      */
     public abstract boolean comandaEnviada();
 
     /**
      * Has order been received?
-     * @return received?
+     * @return received ?
      */
     public abstract boolean comandaRebuda();
 
     /**
      * Shipping price
-     * @return price
+     * @return price float
      */
     public abstract float preuEnviament();
 

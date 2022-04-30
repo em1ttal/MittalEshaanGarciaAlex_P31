@@ -63,7 +63,7 @@ public abstract class Client implements Serializable {
 
     /**
      * Gets client's name
-     * @return name
+     * @return name name
      */
     public String getName() {
         return name;

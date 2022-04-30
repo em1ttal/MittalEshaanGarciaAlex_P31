@@ -25,12 +25,12 @@ public class Adaptador {
 
     /**
      * Passes article parameters to Dades.java
-     * @param id
-     * @param nom
-     * @param preu
-     * @param temps
-     * @param admetUrgent
-     * @throws MercatException
+     * @param id          the id
+     * @param nom         the nom
+     * @param preu        the preu
+     * @param temps       the temps
+     * @param admetUrgent the admet urgent
+     * @throws MercatException the mercat exception
      */
     public void afegirArticle(String id, String nom, float preu, int temps, boolean admetUrgent) throws MercatException{
         dades.afegirArticle(id, nom, preu, temps, admetUrgent);
@@ -50,11 +50,11 @@ public class Adaptador {
 
     /**
      * Passes client parameters to Dades.java
-     * @param email
-     * @param nom
-     * @param adreca
-     * @param esPremium
-     * @throws MercatException
+     * @param email     the email
+     * @param nom       the nom
+     * @param adreca    the adreca
+     * @param esPremium the es premium
+     * @throws MercatException the mercat exception
      */
     public void afegirClient(String email, String nom, String adreca, boolean esPremium) throws MercatException{
         dades.afegirClient(email, nom, adreca, esPremium);
@@ -74,11 +74,11 @@ public class Adaptador {
 
     /**
      * Passes order parameters to Dades.java
-     * @param articlePos
-     * @param clientPos
-     * @param quantitat
-     * @param esUrgent
-     * @throws MercatException
+     * @param articlePos the article pos
+     * @param clientPos  the client pos
+     * @param quantitat  the quantitat
+     * @param esUrgent   the es urgent
+     * @throws MercatException the mercat exception
      */
     public void afegirComanda(int articlePos, int clientPos, int quantitat, boolean esUrgent) throws MercatException{
         dades.afegirComanda(articlePos, clientPos, quantitat, esUrgent);
@@ -86,8 +86,8 @@ public class Adaptador {
 
     /**
      * Passes position of order to remove
-     * @param pos
-     * @throws MercatException
+     * @param pos the pos
+     * @throws MercatException the mercat exception
      */
     public void esborrarComanda(int pos) throws MercatException{
         dades.esborrarComanda(pos);
@@ -119,8 +119,8 @@ public class Adaptador {
 
     /**
      * Saves data to text file
-     * @param camiDesti
-     * @throws MercatException
+     * @param camiDesti the cami desti
+     * @throws MercatException the mercat exception
      */
     public void guardaDades(String camiDesti) throws MercatException{
 
@@ -128,8 +128,8 @@ public class Adaptador {
 
     /**
      * Recovers data form text file
-     * @param camiOrigen
-     * @throws MercatException
+     * @param camiOrigen the cami origen
+     * @throws MercatException the mercat exception
      */
     public void carregaDades(String camiOrigen) throws MercatException{
 

@@ -1,7 +1,6 @@
 package prog2.vista;
 import prog2.adaptador.*;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 /**
@@ -15,6 +14,7 @@ public class MercatUB {
 
     /**
      * Starts menu
+     * @throws MercatException the mercat exception
      */
     public void gestioMercatUB() throws MercatException {
         Scanner sc = new Scanner(System.in);
@@ -26,11 +26,29 @@ public class MercatUB {
      * Main menu options
      */
     private static enum MENU_OPTIONS {
+        /**
+         * M opcion 1 gestio articles menu options.
+         */
         M_Opcion_1_GestioArticles,
+        /**
+         * M opcion 2 gestio client menu options.
+         */
         M_Opcion_2_GestioClient,
+        /**
+         * M opcion 3 gestio comandes menu options.
+         */
         M_Opcion_3_GestioComandes,
+        /**
+         * M opcion 4 guardar dades menu options.
+         */
         M_Opcion_4_GuardarDades,
+        /**
+         * M opcion 5 carrega dades menu options.
+         */
         M_Opcion_5_CarregaDades,
+        /**
+         * M opcion 6 sortir menu options.
+         */
         M_Opcion_6_Sortir
     }
 
@@ -38,8 +56,17 @@ public class MercatUB {
      * Article menu options
      */
     private static enum ARTICLE_OPTIONS {
+        /**
+         * M opcion 1 afegir article article options.
+         */
         M_Opcion_1_AfegirArticle,
+        /**
+         * M opcion 2 visualitzar articles article options.
+         */
         M_Opcion_2_VisualitzarArticles,
+        /**
+         * M opcion 3 sortir article options.
+         */
         M_Opcion_3_Sortir
     }
 
@@ -47,8 +74,17 @@ public class MercatUB {
      * Client menu options
      */
     private static enum CLIENT_OPTIONS {
+        /**
+         * M opcion 1 afegir client client options.
+         */
         M_Opcion_1_AfegirClient,
+        /**
+         * M opcion 2 visualitzar clients client options.
+         */
         M_Opcion_2_VisualitzarClients,
+        /**
+         * M opcion 3 sortir client options.
+         */
         M_Opcion_3_Sortir
     }
 
@@ -56,10 +92,25 @@ public class MercatUB {
      * Order menu options
      */
     private static enum ORDER_OPTIONS {
+        /**
+         * M opcion 1 afegir comanda order options.
+         */
         M_Opcion_1_AfegirComanda,
+        /**
+         * M opcion 2 esborrar comanda order options.
+         */
         M_Opcion_2_EsborrarComanda,
+        /**
+         * M opcion 3 visualitzar comanda order options.
+         */
         M_Opcion_3_VisualitzarComanda,
+        /**
+         * M opcion 4 visualitzar comanda urgent order options.
+         */
         M_Opcion_4_VisualitzarComandaUrgent,
+        /**
+         * M opcion 5 sortir order options.
+         */
         M_Opcion_5_Sortir
     }
 
@@ -67,8 +118,17 @@ public class MercatUB {
      * File menu options
      */
     private static enum FILE_OPTIONS {
+        /**
+         * M opcion 1 articles file options.
+         */
         M_Opcion_1_Articles,
+        /**
+         * M opcion 2 clients file options.
+         */
         M_Opcion_2_Clients,
+        /**
+         * M opcions 3 comandes file options.
+         */
         M_opcions_3_Comandes
     }
 
@@ -178,8 +238,8 @@ public class MercatUB {
 
     /**
      * Calls menus
-     * @param sc
-     * @throws MercatException
+     * @param sc the sc
+     * @throws MercatException the mercat exception
      */
     public void gestioMenu(Scanner sc) throws MercatException {
         Menu menu = new Menu<>("Menu Principal", MENU_OPTIONS.values());
@@ -251,7 +311,7 @@ public class MercatUB {
                         }
                         break;
                     case M_Opcion_4_GuardarDades:
-                        Menu menu4 = new Menu("Menu de Ficheros", FILE_OPTIONS.values());
+                        Menu menu4 = new Menu("Guardar Datos", FILE_OPTIONS.values());
                         menu4.setDescripcions(fileMenu);
                         menu4.mostrarMenu();
                         fOption = (FILE_OPTIONS) menu4.getOpcio(sc);
@@ -260,7 +320,7 @@ public class MercatUB {
                         }
                         break;
                     case M_Opcion_5_CarregaDades:
-                        Menu menu5 = new Menu("Menu de Ficheros", FILE_OPTIONS.values());
+                        Menu menu5 = new Menu("Cargar datos", FILE_OPTIONS.values());
                         menu5.setDescripcions(fileMenu);
                         menu5.mostrarMenu();
                         fOption = (FILE_OPTIONS) menu5.getOpcio(sc);

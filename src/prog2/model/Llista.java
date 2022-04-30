@@ -7,6 +7,7 @@ import prog2.vista.MercatException;
 
 /**
  * General class of lists
+ * @param <T> the type parameter
  * @author eshaan
  * @author alex
  */
@@ -25,7 +26,7 @@ public abstract class Llista<T> implements Serializable {
 
     /**
      * Gets size of current ArrayList
-     * @return size
+     * @return size size
      */
     public int getSize() {
         return llista.size();
@@ -33,20 +34,22 @@ public abstract class Llista<T> implements Serializable {
 
     /**
      * Abstract method that checks if object can be added to the list
+     * @param t the t
      * @return boolean can be added?
      */
     public abstract boolean comprova(T t);
 
     /**
      * Abstract method to add object to list
-     * @param t
-     * @throws MercatException
+     * @param t the t
+     * @throws MercatException the mercat exception
      */
     public abstract void afegir(T t) throws MercatException;
 
     /**
      * Deletes object from list
      * @param t object
+     * @throws MercatException the mercat exception
      */
     public void esborrar(T t) throws MercatException{
         llista.remove(t);
@@ -54,8 +57,8 @@ public abstract class Llista<T> implements Serializable {
 
     /**
      * Gets object from given position
-     * @param position
-     * @return
+     * @param position the position
+     * @return at
      */
     public T getAt(int position) {
         return llista.get(position);
@@ -78,7 +81,7 @@ public abstract class Llista<T> implements Serializable {
 
     /**
      * Gets the ArrayList
-     * @return ArrayList
+     * @return ArrayList array list
      */
     public ArrayList<T> getArrayList() {
         ArrayList<T> arrlist = new ArrayList<>(llista);
