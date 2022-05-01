@@ -1,9 +1,9 @@
 package prog2.adaptador;
 
 import prog2.model.*;
-import java.io.*;
 import prog2.vista.MercatException;
 
+import java.io.*;
 import java.util.ArrayList;
 
 /**

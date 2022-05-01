@@ -1,4 +1,5 @@
 package prog2.model;
+
 import prog2.vista.MercatException;
 
 import java.util.ArrayList;

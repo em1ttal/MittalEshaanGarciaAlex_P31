@@ -1,21 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package prog2.model;
 
-import java.util.ArrayList;
-import java.util.List;
 import prog2.vista.MercatException;
 
+import java.util.ArrayList;
+
 /**
- * The interface In dades.
- *
+ * The interface for Dades
  * @author dortiz
  */
 public interface InDades {
-
     /**
      * Afegir article.
      * @param id          the id

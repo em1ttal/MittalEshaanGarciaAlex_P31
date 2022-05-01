@@ -1,8 +1,3 @@
-/*
- * Universitat de Barcelona
- * Programació 2
- * Curs 2015-2016
- */
 package prog2.vista;
 
 import java.util.Scanner;

@@ -1,4 +1,5 @@
 package prog2.vista;
+
 import prog2.adaptador.*;
 
 import java.util.Scanner;
@@ -290,7 +291,8 @@ public class MercatUB {
                         System.out.println("Datos guardados");
                         break;
                     case M_Opcion_5_CarregaDades:
-                        adaptador.carregaDades("Datos cargados");
+                        adaptador.carregaDades("");
+                        System.out.println("Datos cargados");
                         break;
                 }
             } catch (MercatException e) { System.out.println(e.getMessage()); }
