@@ -115,24 +115,6 @@ public class MercatUB {
     }
 
     /**
-     * File menu options
-     */
-    private static enum FILE_OPTIONS {
-        /**
-         * M opcion 1 articles file options.
-         */
-        M_Opcion_1_Articles,
-        /**
-         * M opcion 2 clients file options.
-         */
-        M_Opcion_2_Clients,
-        /**
-         * M opcions 3 comandes file options.
-         */
-        M_opcions_3_Comandes
-    }
-
-    /**
      * Main menu text
      */
     private static final String[] mainMenu = {
@@ -171,15 +153,6 @@ public class MercatUB {
             "Visualitzar comanda",          //Option 3
             "Visualitzar comandes urgents", //Option 4
             "Sortir"                        //Option 5
-    };
-
-    /**
-     * File menu text
-     */
-    private static final String[] fileMenu = {
-            "Articles",
-            "Clientes",
-            "Comandes"
     };
 
     /**
@@ -252,7 +225,6 @@ public class MercatUB {
         ARTICLE_OPTIONS aOption;
         CLIENT_OPTIONS cOption;
         ORDER_OPTIONS oOption;
-        FILE_OPTIONS fOption;
         do {
             try{
                 menu.mostrarMenu();
@@ -314,22 +286,11 @@ public class MercatUB {
                         }
                         break;
                     case M_Opcion_4_GuardarDades:
-                        Menu menu4 = new Menu("Guardar Datos", FILE_OPTIONS.values());
-                        menu4.setDescripcions(fileMenu);
-                        menu4.mostrarMenu();
-                        fOption = (FILE_OPTIONS) menu4.getOpcio(sc);
-                        switch (fOption){
-
-                        }
+                        adaptador.guardaDades("");
+                        System.out.println("Datos guardados");
                         break;
                     case M_Opcion_5_CarregaDades:
-                        Menu menu5 = new Menu("Cargar datos", FILE_OPTIONS.values());
-                        menu5.setDescripcions(fileMenu);
-                        menu5.mostrarMenu();
-                        fOption = (FILE_OPTIONS) menu5.getOpcio(sc);
-                        switch (fOption){
-
-                        }
+                        adaptador.carregaDades("Datos cargados");
                         break;
                 }
             } catch (MercatException e) { System.out.println(e.getMessage()); }
