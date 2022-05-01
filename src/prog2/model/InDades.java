@@ -18,7 +18,6 @@ public interface InDades {
 
     /**
      * Afegir article.
-     *
      * @param id          the id
      * @param nom         the nom
      * @param preu        the preu
@@ -30,14 +29,12 @@ public interface InDades {
 
     /**
      * Recupera articles array list.
-     *
      * @return the array list
      */
     public ArrayList<Article> recuperaArticles();
 
     /**
      * Afegir client.
-     *
      * @param email     the email
      * @param nom       the nom
      * @param adreca    the adreca
@@ -48,14 +45,12 @@ public interface InDades {
 
     /**
      * Recupera clients array list.
-     *
      * @return the array list
      */
     public ArrayList<Client> recuperaClients();
 
     /**
      * Afegir comanda.
-     *
      * @param articlePos the article pos
      * @param clientPos  the client pos
      * @param quantitat  the quantitat
@@ -66,7 +61,6 @@ public interface InDades {
 
     /**
      * Esborrar comanda.
-     *
      * @param position the position
      * @throws MercatException the mercat exception
      */
@@ -74,14 +68,12 @@ public interface InDades {
 
     /**
      * Recupera comandes array list.
-     *
      * @return the array list
      */
     public ArrayList<Comanda> recuperaComandes();
 
     /**
      * Recupera comandes urgents array list.
-     *
      * @return the array list
      */
     public ArrayList<Comanda> recuperaComandesUrgents();

@@ -173,6 +173,9 @@ public class MercatUB {
             "Sortir"                        //Option 5
     };
 
+    /**
+     * File menu text
+     */
     private static final String[] fileMenu = {
             "Articles",
             "Clientes",
@@ -246,10 +249,10 @@ public class MercatUB {
         menu.setDescripcions(mainMenu);
 
         MENU_OPTIONS mainOption = null;
-        ARTICLE_OPTIONS aOption = null;
-        CLIENT_OPTIONS cOption = null;
-        ORDER_OPTIONS oOption = null;
-        FILE_OPTIONS fOption = null;
+        ARTICLE_OPTIONS aOption;
+        CLIENT_OPTIONS cOption;
+        ORDER_OPTIONS oOption;
+        FILE_OPTIONS fOption;
         do {
             try{
                 menu.mostrarMenu();

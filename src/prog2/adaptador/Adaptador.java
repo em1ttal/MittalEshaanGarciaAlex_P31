@@ -111,7 +111,7 @@ public class Adaptador {
      */
     public String recuperaComandaUrgents(){
         StringBuilder s = new StringBuilder();
-        ArrayList<Comanda> c = dades.recuperaComandes();
+        ArrayList<Comanda> c = dades.recuperaComandesUrgents();
         for(Comanda comanda : c)
             s.append(comanda.toString()).append("\n");
         return s.toString();
