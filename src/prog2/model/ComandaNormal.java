@@ -1,5 +1,7 @@
 package prog2.model;
 
+import java.util.Date;
+
 /**
  * Class of normal order
  * @author eshaan
@@ -23,14 +25,16 @@ public class ComandaNormal extends Comanda {
 
     @Override
     public boolean comandaEnviada() {
-
-        return false;
+        Date act = new Date();
+        Date cre = getDateCreation();
+        return ((act.getTime() - cre.getTime()) > ((long) getArticle().getTimeToShip() * 60 * 1000));
     }
 
     @Override
     public boolean comandaRebuda() {
-
-        return false;
+        Date act = new Date();
+        Date cre = getDateCreation();
+        return ((act.getTime() - cre.getTime()) > (2 * 24 * 60 * 60 * 1000));
     }
 
     @Override

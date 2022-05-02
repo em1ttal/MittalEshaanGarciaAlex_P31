@@ -1,5 +1,7 @@
 package prog2.model;
 
+import java.util.Date;
+
 /**
  * Class of urgent order
  * @author eshaan
@@ -23,12 +25,16 @@ public class ComandaUrgent extends Comanda {
 
     @Override //TODO
     public boolean comandaEnviada() {
-        return false;
+        Date act = new Date();
+        Date cre = getDateCreation();
+        return ((act.getTime() - cre.getTime()) > ((long) getArticle().getTimeToShip() * 60 * 1000));
     }
 
     @Override //TODO
     public boolean comandaRebuda() {
-        return false;
+        Date act = new Date();
+        Date cre = getDateCreation();
+        return ((act.getTime() - cre.getTime()) > (24 * 60 * 60 * 1000));
     }
 
     @Override

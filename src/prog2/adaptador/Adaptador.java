@@ -124,7 +124,18 @@ public class Adaptador {
      * @throws MercatException the mercat exception
      */
     public void guardaDades(String camiDesti) throws MercatException{
-
+        File file = new File(camiDesti);
+        try{
+            FileOutputStream fos = new FileOutputStream(file);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(dades);
+            oos.close();
+            fos.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("EXCEPTION: File not found!");
+        } catch (IOException e) {
+            System.out.println("EXCEPTION: IO Exception!");
+        }
     }
 
     /**
@@ -133,6 +144,19 @@ public class Adaptador {
      * @throws MercatException the mercat exception
      */
     public void carregaDades(String camiOrigen) throws MercatException{
-
+        File file = new File(camiOrigen);
+        try{
+            FileInputStream fin = new FileInputStream(file);
+            ObjectInputStream ois = new ObjectInputStream(fin);
+            dades = (Dades) ois.readObject();
+            ois.close();
+            fin.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("EXCPETION: File not found!");
+        } catch (IOException e) {
+            System.out.println("EXCEPTION: IO Exception!");
+        } catch (ClassNotFoundException e) {
+            System.out.println("EXCEPTION: Class not found!");
+        }
     }
 }

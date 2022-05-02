@@ -24,11 +24,7 @@ public abstract class Comanda implements Serializable {
     /**
      * Date and time of order
      */
-    private Date date = new Date();
-    /**
-     * String of date and time
-     */
-    private String date_time;
+    private Date dateCreation;
     /**
      * Price of normal order
      */
@@ -48,7 +44,7 @@ public abstract class Comanda implements Serializable {
         this.client = client;
         this.article = article;
         this.numArticles = numArticles;
-        this.date_time = date.toString();
+        this.dateCreation = new Date();
     }
 
     /**
@@ -90,7 +86,7 @@ public abstract class Comanda implements Serializable {
     public String toString(){
         return "Tipus: " + tipusComanda() + ", Article: " + article.getName() +
                 ", Client: " + client.getName() + ", Quantitat: "  + numArticles +
-                ", Data de creacio: " + date_time + ", Enviat: " + comandaEnviada() +
+                ", Data de creacio: " + dateCreation.toString() + ", Enviat: " + comandaEnviada() +
                 ", Rebuda: " + comandaRebuda() + ", Preu: " + calcPreu() +
                 "€, Preu Enviament: " + preuEnviament() + "€";
     }
@@ -109,6 +105,14 @@ public abstract class Comanda implements Serializable {
      */
     public void setClient(Client client) {
         this.client = client;
+    }
+
+    /**
+     * Gets date of creation
+     * @return the date of creation
+     */
+    public Date getDateCreation() {
+        return dateCreation;
     }
 
     /**
