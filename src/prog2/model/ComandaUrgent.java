@@ -23,14 +23,14 @@ public class ComandaUrgent extends Comanda {
         return "Urgent";
     }
 
-    @Override //TODO
+    @Override
     public boolean comandaEnviada() {
         Date act = new Date();
         Date cre = getDateCreation();
         return ((act.getTime() - cre.getTime()) > ((long) getArticle().getTimeToShip() * 60 * 1000));
     }
 
-    @Override //TODO
+    @Override
     public boolean comandaRebuda() {
         Date act = new Date();
         Date cre = getDateCreation();
