@@ -17,8 +17,8 @@ public class LlistaComandes extends Llista<Comanda> implements Serializable {
     @Override
     public boolean comprova(Comanda comanda) {
         if(comanda instanceof ComandaUrgent && comanda.getArticle().isPriorityShipping())
-            return false;
-        return true;
+            return true;
+        return false;
     }
 
     /**
