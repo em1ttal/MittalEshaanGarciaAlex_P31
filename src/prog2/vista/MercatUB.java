@@ -287,12 +287,10 @@ public class MercatUB {
                         }
                         break;
                     case M_Opcion_4_GuardarDades:
-                        adaptador.guardaDades("");
-                        System.out.println("Datos guardados");
+                        adaptador.guardaDades("dades.dat");
                         break;
                     case M_Opcion_5_CarregaDades:
-                        adaptador.carregaDades("");
-                        System.out.println("Datos cargados");
+                        adaptador.carregaDades("dades.dat");
                         break;
                 }
             } catch (MercatException e) { System.out.println(e.getMessage()); }
