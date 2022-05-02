@@ -39,6 +39,10 @@ public class ComandaNormal extends Comanda {
 
     @Override
     public float preuEnviament() {
-        return 1;
+        float price = 1;
+        if(getClient().tipusClient().equals("Premium"))
+            return price - (price * (getClient().descompteEnv()/100));
+        else
+            return price;
     }
 }

@@ -39,6 +39,10 @@ public class ComandaUrgent extends Comanda {
 
     @Override
     public float preuEnviament() {
-        return 4;
+        float price = 4;
+        if(getClient().tipusClient().equals("Premium"))
+            return price - (price * (getClient().descompteEnv()/100));
+        else
+            return price;
     }
 }
