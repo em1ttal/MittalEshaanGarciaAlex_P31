@@ -216,7 +216,7 @@ public class MercatUB {
     /**
      * Asks user for file name
      * @param sc
-     * @return
+     * @return name of file
      */
     public String fileName(Scanner sc){
         System.out.print("Nombre del fichero (acabar con .dat): ");
