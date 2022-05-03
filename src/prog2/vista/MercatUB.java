@@ -213,6 +213,12 @@ public class MercatUB {
         System.out.println("Pedido borrado");
     }
 
+    public String fileName(Scanner sc){
+        System.out.print("Nombre del fichero: ");
+        String name = sc.nextLine();
+        return name;
+    }
+
     /**
      * Calls menus
      * @param sc the sc
@@ -287,10 +293,11 @@ public class MercatUB {
                         }
                         break;
                     case M_Opcion_4_GuardarDades:
-                        adaptador.guardaDades("dades.dat");
+                        adaptador.guardaDades(fileName(sc));
                         break;
                     case M_Opcion_5_CarregaDades:
-                        adaptador.carregaDades("dades.dat");
+
+                        adaptador.carregaDades(fileName(sc));
                         break;
                 }
             } catch (MercatException e) { System.out.println(e.getMessage()); }
