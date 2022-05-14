@@ -31,7 +31,6 @@ public class LlistaComandes extends Llista<Comanda> implements Serializable {
         if(!comprova(comanda)) throw new MercatException("No se puede añadir un envio normal a un envio urgente!");
 
         llista.add(comanda);
-        System.out.println("Order added");
     }
 
     /**

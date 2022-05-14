@@ -33,6 +33,5 @@ public class LlistaArticles extends Llista<Article> implements Serializable {
         if(!comprova(article)) throw new MercatException("Ya existe una article con esta identificador!");
 
         llista.add(article);
-        System.out.println("Article added");
     }
 }

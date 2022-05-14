@@ -33,6 +33,5 @@ public class LlistaClients extends Llista<Client> implements Serializable {
         if(!comprova(client)) throw new MercatException("Ya existe un client con este correo electronico!");
 
         llista.add(client);
-        System.out.println("Client added");
     }
 }
